@@ -1,6 +1,39 @@
 {
   "nodes": {
+    "eve-preview-manager": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1768528164,
+        "narHash": "sha256-8zD0i/mNhyU8wp+5cKnIwZMqUmqHjn3zOzazWVSUy9Y=",
+        "rev": "e11f9489b31108f72d782c929170d2f89940a12e",
+        "revCount": 293,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/h0lylag/EVE-Preview-Manager/1.6.2/019bc488-850e-73d5-a61f-a3971abc6973/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/h0lylag/EVE-Preview-Manager/%2A"
+      }
+    },
     "nixpkgs": {
+      "locked": {
+        "lastModified": 1762111121,
+        "narHash": "sha256-4vhDuZ7OZaZmKKrnDpxLZZpGIJvAeMtK6FKLJYUtAdw=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "b3d51a0365f6695e7dd5cdf3e180604530ed33b4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1771714954,
         "narHash": "sha256-nhZJPnBavtu40/L2aqpljrfUNb2rxmWTmSjK2c9UKds=",
@@ -18,7 +51,8 @@
     },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "eve-preview-manager": "eve-preview-manager",
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },
