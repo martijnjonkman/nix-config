@@ -35,7 +35,7 @@
 
   users.users.martijn = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "corectrl" ];
     packages = [ ];
   };
 
