@@ -18,6 +18,7 @@
     protonup-ng
     wowup-cf
     fancontrol-gui
+    lm_sensors
 
     eve-preview-manager
   ];
