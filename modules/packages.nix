@@ -17,6 +17,7 @@
     mangohud
     protonup-ng
     wowup-cf
+    fancontrol-gui
 
     eve-preview-manager
   ];
