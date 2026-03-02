@@ -3,10 +3,10 @@
 {
   environment.systemPackages = with pkgs; [
     vim
+    tree
     wget
     git
     cifs-utils
-    neovim
     alacritty
     btop
     xwallpaper
@@ -14,10 +14,8 @@
     rofi
     pfetch
     discord
-    mangohud
     protonup-ng
     wowup-cf
-    fancontrol-gui
     lm_sensors
 
     eve-preview-manager
