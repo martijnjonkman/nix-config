@@ -11,7 +11,7 @@
     windowManager.qtile.enable = true;
 
     displayManager.sessionCommands = ''
-      xwallpaper --zoom ~/Downloads/walls/cosy-retreat.png
+      xwallpaper --zoom ~/nixos-config/assests/wallpapers/cosy-retreat.png
       xset r rate 200 35 &
     '';
 
