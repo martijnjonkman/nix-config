@@ -11,7 +11,10 @@
   services.xserver = {
     enable = true;
     windowManager.i3.enable = true;
-    displayManager.lightdm.enable = true;
+    displayManager.lightdm = {
+      enable = true;
+      background = "#1e1e2e";
+    };
     videoDrivers = [ "amdgpu" ];
 
     displayManager.sessionCommands = ''
