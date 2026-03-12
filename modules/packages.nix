@@ -10,7 +10,6 @@
     alacritty
     btop
     
-    xwallpaper
     i3
     i3status
     polybar
