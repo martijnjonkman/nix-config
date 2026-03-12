@@ -6,22 +6,21 @@
     enable32Bit = true;
   };
 
+  services.displayManager.defaultSession = "none+i3";
+
   services.xserver = {
     enable = true;
     windowManager.i3.enable = true;
+    displayManager.lightdm.enable = true;
     videoDrivers = [ "amdgpu" ];
 
     displayManager.sessionCommands = ''
-      feh --bg-zoom ~/nixos-config/assets/wallpapers/cosy-retreat.png &
       xset r rate 200 35 &
-      dunst &
-      polybar main &
     '';
 
     displayManager.setupCommands = ''
       ${pkgs.xorg.xrandr}/bin/xrandr \
-        --output DisplayPort-1 --mode 2560x1440 --rate 144 --primary \
-        --output HDMI-A-0 --mode 2560x1440 --rate 144 --right-of DisplayPort-1
+        --output HDMI-A-0 --mode 2560x1440 --rate 144
     '';
   };
 
