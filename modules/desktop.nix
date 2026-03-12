@@ -13,7 +13,7 @@
     windowManager.i3.enable = true;
     displayManager.lightdm = {
       enable = true;
-      background = "#1e1e2e";
+      background = ~/nixos-config/assets/wallpapers/cosy-retreat.png;
     };
     videoDrivers = [ "amdgpu" ];
 
