@@ -12,7 +12,7 @@
     
     xwallpaper
     i3
-    i3 status
+    i3status
     polybar
     rofi
     dunst
