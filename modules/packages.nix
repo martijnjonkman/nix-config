@@ -9,14 +9,27 @@
     cifs-utils
     alacritty
     btop
+    
     xwallpaper
-    pcmanfm
+    i3
+    i3 status
+    polybar
     rofi
+    dunst
+    feh
+
+    autorandr
+    arandr
+    
+    pcmanfm
     pfetch
     discord
     protonup-ng
+    xdotool
+    xorg.xprop
     wowup-cf
     lm_sensors
+    flameshot
 
     eve-preview-manager
   ];
