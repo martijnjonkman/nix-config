@@ -8,7 +8,6 @@
       ../../modules/common.nix
       ../../modules/desktop.nix
       ../../modules/gaming.nix
-      ../../modules/packages.nix
       ../../modules/home.nix
     ];
   

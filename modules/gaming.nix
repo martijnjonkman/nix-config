@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   programs.corectrl.enable = true;
@@ -16,4 +16,13 @@
     STEAM_EXTRA_COMPAT_TOOLS_PATH =
       "\${HOME}/.steam/root/compatibilitytools.d";
   };
+
+  environment.systemPackages = with pkgs; [
+    discord
+    eve-preview-manager
+    protonup-ng
+    wowup-cf
+    xdotool
+    xorg.xprop
+  ];
 }

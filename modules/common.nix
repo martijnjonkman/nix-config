@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   nix.settings.experimental-features = [
@@ -18,4 +18,14 @@
 
   boot.supportedFilesystems = [ "cifs" ];
 
+  environment.systemPackages = with pkgs; [
+    btop
+    cifs-utils
+    git
+    lm_sensors
+    pfetch
+    tree
+    vim
+    wget
+  ];
 }

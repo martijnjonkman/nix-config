@@ -52,4 +52,19 @@
     jetbrains-mono
     nerd-fonts.jetbrains-mono
   ];
+
+  environment.systemPackages = with pkgs; [
+    alacritty
+    arandr
+    autorandr
+    dunst
+    feh
+    flameshot
+    i3
+    i3status
+    papirus-icon-theme
+    pcmanfm
+    polybar
+    rofi
+  ];
 }
