@@ -15,6 +15,10 @@
     overlay = final: prev: {
       eve-preview-manager =
         eve-preview-manager.packages.${system}.default;
+      polybar = prev.polybar.override {
+        i3Support    = true;
+        pulseSupport = true;
+      };
     };
   in {
     nixosConfigurations.nixos-btw = 

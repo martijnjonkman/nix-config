@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Reload polybar and reassign workspace 1 to HDMI when DisplayPort is disconnected
+~/.config/polybar/launch.sh
+i3-msg 'workspace 1; move workspace to output HDMI-A-0' 2>/dev/null || true

@@ -19,11 +19,7 @@
 
     displayManager.sessionCommands = ''
       xset r rate 200 35 &
-    '';
-
-    displayManager.setupCommands = ''
-      ${pkgs.xorg.xrandr}/bin/xrandr \
-        --output HDMI-A-0 --mode 2560x1440 --rate 144
+      ${pkgs.autorandr}/bin/autorandr --change --default hdmi-only &
     '';
   };
 
@@ -65,6 +61,7 @@
     papirus-icon-theme
     pcmanfm
     polybar
+    resources
     rofi
   ];
 }

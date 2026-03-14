@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Reload polybar after switching to dual-monitor layout
+~/.config/polybar/launch.sh

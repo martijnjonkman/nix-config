@@ -12,6 +12,7 @@ font pango:JetBrains Mono 10
 # Autostart
 exec --no-startup-id dunst
 exec --no-startup-id picom
+exec --no-startup-id ~/.config/polybar/launch.sh
 
 # Appearance
 gaps inner 2
@@ -99,11 +100,11 @@ set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 
-# Pin workspaces to monitors
-workspace $ws1 output $mon1
-workspace $ws2 output $mon2
-workspace $ws3 output $mon2
-workspace $ws4 output $mon2
+# Pin workspaces to monitors, with fallback for when DisplayPort is disconnected
+workspace $ws1 output $mon1 $mon2
+workspace $ws2 output $mon2 $mon1
+workspace $ws3 output $mon2 $mon1
+workspace $ws4 output $mon2 $mon1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -126,22 +127,5 @@ for_window [class="flameshot"] floating enable
 for_window [class="steam_app_8500"] floating enable
 for_window [class="steam_app_8500"] move to workspace $ws1
 
-# Bar - temporary until polybar is set up
-bar {
-  status_command i3status
-  position top
-  colors {
-    background $bg
-    statusline $fg
-    separator $inactive
-    focused_workspace   $accent   $bg $fg
-    active_workspace    $inactive $bg $fg
-    inactive_workspace  $bg       $bg $inactive
-    urgent_workspace    $urgent   $bg $fg
-  }
-}
-
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-bindsym $mod+r mode "resize"
