@@ -1,0 +1,57 @@
+[window]
+opacity = 0.9
+padding = { x = 12, y = 12 }
+decorations = "none"
+startup_mode = "Windowed"
+
+[scrolling]
+history = 10000
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+size = 10.0
+
+[font.offset]
+x = 0
+y = 2
+
+[colors.primary]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[colors.cursor]
+text    = "#1e1e2e"
+cursor  = "#89b4fa"
+
+[colors.normal]
+black   = "#45475a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#cba4f7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
+
+[colors.bright]
+black   = "#585b70"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#cba4f7"
+cyan    = "#94e2d5"
+white   = "#a6adc8"
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+
+[selection]
+save_to_clipboard = true
+
+[keyboard]
+bindings = [
+  { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" },
+] 

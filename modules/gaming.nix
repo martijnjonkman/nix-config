@@ -1,10 +1,8 @@
 { ... }:
 
 {
-  programs.corectrl = {
-    enable = true;
-    gpuOverclock.enable = true;
-  };
+  programs.corectrl.enable = true;
+  hardware.amdgpu.overdrive.enable = true;
 
   programs.firefox.enable = true;
   programs.gamemode.enable = true;

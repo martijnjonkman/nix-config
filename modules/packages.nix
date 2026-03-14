@@ -14,6 +14,7 @@
     i3status
     polybar
     rofi
+    papirus-icon-theme
     dunst
     feh
 

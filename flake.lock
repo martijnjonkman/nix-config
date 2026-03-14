@@ -17,6 +17,27 @@
         "url": "https://flakehub.com/f/h0lylag/EVE-Preview-Manager/%2A"
       }
     },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773264488,
+        "narHash": "sha256-rK0507bDuWBrZo+0zts9bCs/+RRUEHuvFE5DHWPxX/Q=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "5c0f63f8d55040a7eed69df7e3fcdd15dfb5a04c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-25.11",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1771008912,
@@ -52,6 +73,7 @@
     "root": {
       "inputs": {
         "eve-preview-manager": "eve-preview-manager",
+        "home-manager": "home-manager",
         "nixpkgs": "nixpkgs_2"
       }
     }
