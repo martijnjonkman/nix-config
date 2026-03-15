@@ -1,19 +1,10 @@
 #!/usr/bin/env bash
 
-# Kill any running polybar instances
-pkill -x polybar || true
-sleep 0.3
-
-# Wait until processes have been shut down (max 3 seconds)
-timeout=30
-while pgrep -u "$UID" -x polybar > /dev/null; do
-  sleep 0.1
-  timeout=$((timeout - 1))
-  if [ "$timeout" -le 0 ]; then
-    pkill -9 -x polybar || true
-    break
-  fi
-done
+# Kill all running polybar instances (SIGTERM first, then SIGKILL)
+pkill -x polybar 2>/dev/null || true
+sleep 0.5
+pkill -9 -x polybar 2>/dev/null || true
+sleep 0.2
 
 # Always launch the main bar on HDMI-A-0 (carries the system tray)
 polybar main >> /tmp/polybar.log 2>&1 &

@@ -21,6 +21,7 @@
     discord
     eve-preview-manager
     protonup-ng
+    pyfa
     wowup-cf
     xdotool
     xorg.xprop

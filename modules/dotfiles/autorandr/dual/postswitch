@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# Reload polybar after switching to dual-monitor layout
-~/.config/polybar/launch.sh
+# Reload polybar on monitor change — only if already running (i3 handles the initial start)
+if pgrep -x polybar > /dev/null; then
+  ~/.config/polybar/launch.sh
+fi
