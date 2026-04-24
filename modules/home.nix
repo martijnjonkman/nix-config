@@ -30,10 +30,6 @@
       };
     };
 
-    # Note: xfconf.settings requires a running XFCE session
-    # Configure panels manually: right-click panel -> Panel -> Panel Preferences
-    # Add second panel, set Output to your second monitor, add pulseaudio plugin
-
     programs.vim = {
       enable = true;
       extraConfig = builtins.readFile ./dotfiles/vim/vimrc;
@@ -42,6 +38,7 @@
     home.file.".config/rofi/config.rasi".source = ./dotfiles/rofi/config.rasi;
     home.file.".config/rofi/theme.rasi".source = ./dotfiles/rofi/theme.rasi;
     home.file.".config/alacritty/alacritty.toml".source = ./dotfiles/alacritty/alacritty.toml;
+    home.file.".config/dunst/dunstrc".source = ./dotfiles/dunst/dunstrc;
     home.file.".config/oxwm/config.lua".source = ./dotfiles/oxwm/config.lua;
 
     programs.autorandr = {

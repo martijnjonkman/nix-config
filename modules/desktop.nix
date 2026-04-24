@@ -10,7 +10,6 @@
 
   services.xserver = {
     enable = true;
-    desktopManager.xfce.enable = true;
     displayManager.lightdm = {
       enable = true;
       background = ../assets/wallpapers/5m5kLI9.png;
@@ -39,7 +38,7 @@
     settings = {
       unredir-if-possible = true;
       unredir-if-possible-exclude = [
-        "class_g = 'EVE Online'"
+        "class_g = 'steam_app_8500'"
       ];
     };
   };
@@ -78,6 +77,5 @@
     playerctl
     resources
     rofi
-    xfce.xfce4-pulseaudio-plugin
   ];
 }

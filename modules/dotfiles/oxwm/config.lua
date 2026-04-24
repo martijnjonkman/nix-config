@@ -129,6 +129,7 @@ oxwm.rule.add({ instance = "gimp", floating = true })
 -- oxwm.rule.add({ class = "Alacritty", tag = 9, focus = true })
 -- oxwm.rule.add({ class = "firefox", title = "Library", floating = true })
 oxwm.rule.add({ class = "firefox", tag = 2 })
+oxwm.rule.add({ class = "steam_app_8500", floating = true })
 -- oxwm.rule.add({ instance = "mpv", floating = true })
 
 -- To find window properties, use xprop and click on the window
@@ -296,5 +297,5 @@ oxwm.key.bind({ modkey, "Control", "Shift" }, "9", oxwm.tag.toggletag(8))
 
 -- oxwm.autostart("picom")
 -- oxwm.autostart("feh --bg-scale ~/wallpaper.jpg")
--- oxwm.autostart("dunst")
+oxwm.autostart("dunst")
 -- oxwm.autostart("nm-applet")
