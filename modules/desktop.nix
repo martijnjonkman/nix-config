@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 
 {
   hardware.graphics = {
@@ -6,16 +6,24 @@
     enable32Bit = true;
   };
 
-  services.displayManager.defaultSession = "none+i3";
+  services.displayManager.defaultSession = "none+oxwm";
 
   services.xserver = {
     enable = true;
-    windowManager.i3.enable = true;
+    desktopManager.xfce.enable = true;
     displayManager.lightdm = {
       enable = true;
-      background = ../assets/wallpapers/cosy-retreat.png;
+      background = ../assets/wallpapers/5m5kLI9.png;
     };
     videoDrivers = [ "amdgpu" ];
+
+    windowManager.session = [{
+      name = "oxwm";
+      start = ''
+        ${unstable.oxwm}/bin/oxwm &
+        waitPID=$!
+      '';
+    }];
 
     displayManager.sessionCommands = ''
       xset r rate 200 35 &
@@ -27,7 +35,7 @@
     enable = true;
     backend = "glx";
     fade = true;
-    vSync = true;
+    vSync = false;
     settings = {
       unredir-if-possible = true;
       unredir-if-possible-exclude = [
@@ -44,6 +52,12 @@
     pulse.enable = true;
   };
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "gtk";
+  };
+
   fonts.packages = with pkgs; [
     jetbrains-mono
     nerd-fonts.jetbrains-mono
@@ -56,12 +70,14 @@
     dunst
     feh
     flameshot
-    i3
-    i3status
+    gruvbox-gtk-theme
+    unstable.oxwm
     papirus-icon-theme
+    pavucontrol
     pcmanfm
-    polybar
+    playerctl
     resources
     rofi
+    xfce.xfce4-pulseaudio-plugin
   ];
 }

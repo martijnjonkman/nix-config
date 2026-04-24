@@ -19,9 +19,10 @@
 
   environment.systemPackages = with pkgs; [
     discord
-    eve-preview-manager
     protonup-ng
     pyfa
+    teamspeak6-client
+    wmctrl
     wowup-cf
     xdotool
     xorg.xprop

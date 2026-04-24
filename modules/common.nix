@@ -22,8 +22,8 @@
     btop
     cifs-utils
     git
+    kdePackages.kate
     lm_sensors
-    pfetch
     tree
     vim
     wget

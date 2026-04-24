@@ -35,7 +35,6 @@
   users.users.martijn = {
     isNormalUser = true;
     extraGroups = [ "wheel" "corectrl" ];
-    packages = [ ];
   };
 
   system.stateVersion = "25.11";
